@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: wandb-demo
+spec:
+  ttlSecondsAfterFinished: 300
+  template:
+    spec:
+      containers:
+        - name: wandb-demo
+          image: seanshahkarami/wandb-demo:0.1.0
+          envFrom:
+            - secretRef:
+                name: wandb-demo-secret
+      restartPolicy: OnFailure
