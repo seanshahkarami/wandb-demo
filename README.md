@@ -13,3 +13,9 @@ The deploy the job:
 ```sh
 kubectl apply -f job.yaml
 ```
+
+To delete the job:
+
+```sh
+kubectl delete -f job.yaml
+```
