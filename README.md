@@ -8,20 +8,20 @@ Once you have access to a development node, you'll need to do the one time step 
 kubectl create secret generic wand-api-key --from-literal=WANDB_API_KEY=YOURAPIKEY
 ```
 
-The deploy the job:
+Now you can manage you job as follows:
 
 ```sh
+# deploy the job
 kubectl apply -f job.yaml
-```
 
-To delete the job:
+# tail the logs
+kubectl logs -f jobs/wandb-demo
 
-```sh
+# get pod status
+kubectl get pods
+
+# delete the job when you're done
 kubectl delete -f job.yaml
 ```
 
-To view the logs:
-
-```sh
-kubectl logs -f jobs/wandb-demo
-```
+_Note: This demo is intentionally using only basic Kubernetes concepts and tooling to manage a single Job resource. In general, there are more tools like Kustomize or Helm which can go a long way in managing bigger examples._
