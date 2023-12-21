@@ -19,3 +19,9 @@ To delete the job:
 ```sh
 kubectl delete -f job.yaml
 ```
+
+To view the logs:
+
+```sh
+kubectl logs -f jobs/wandb-demo
+```
