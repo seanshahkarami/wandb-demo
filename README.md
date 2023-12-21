@@ -11,5 +11,5 @@ kubectl create secret generic wand-api-key --from-literal=WANDB_API_KEY=YOURAPIK
 The deploy the job:
 
 ```sh
-kubectl apply -f .
+kubectl apply -f job.yaml
 ```
