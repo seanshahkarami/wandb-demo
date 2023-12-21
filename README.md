@@ -14,11 +14,14 @@ Now you can manage you job as follows:
 # deploy the job
 kubectl apply -f job.yaml
 
-# tail the logs
-kubectl logs -f jobs/wandb-demo
+# get job status
+kubectl get jobs
 
 # get pod status
 kubectl get pods
+
+# tail the logs
+kubectl logs -f jobs/wandb-demo
 
 # delete the job when you're done
 kubectl delete -f job.yaml
