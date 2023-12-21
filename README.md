@@ -1,7 +1,15 @@
 # Weights and Biases Sage Demo
 
-This is an example deployment of a Weights and Biases publisher app. All you need to do is provider your `WANDB_API_TOKEN` in the [kustomization.yaml](kustomization.yaml) file and run the following on a development node:
+This is an example deployment of a Weights and Biases publisher app.
+
+First, add a `wand-api-key` secret with your `WANDB_API_TOKEN`:
 
 ```sh
-kubectl apply -k .
+kubectl create secret generic wand-api-key --from-literal=WANDB_API_KEY=YOURAPIKEY
+```
+
+The deploy the job:
+
+```sh
+kubectl apply -f .
 ```

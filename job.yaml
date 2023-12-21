@@ -11,5 +11,5 @@ spec:
           image: seanshahkarami/wandb-demo:0.1.0
           envFrom:
             - secretRef:
-                name: wandb-demo-secret
+                name: wandb-api-key
       restartPolicy: OnFailure

@@ -1,6 +1,0 @@
-secretGenerator:
-  - name: wandb-demo-secret
-    literals:
-      - "WANDB_API_KEY="
-resources:
-  - "job.yaml"
