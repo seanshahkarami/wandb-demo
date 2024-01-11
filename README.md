@@ -2,10 +2,10 @@
 
 This is an example deployment of a Weights and Biases publisher app.
 
-Once you have access to a development node, you'll need to do the one time step of adding a `wand-api-key` secret with your `WANDB_API_KEY`:
+Once you have access to a development node, you'll need to do the one time step of adding a `wandb-api-key` secret with your `WANDB_API_KEY`:
 
 ```sh
-kubectl create secret generic wand-api-key --from-literal=WANDB_API_KEY=YOURAPIKEY
+kubectl create secret generic wandb-api-key --from-literal=WANDB_API_KEY=YOURAPIKEY
 ```
 
 Now you can manage you job as follows:
